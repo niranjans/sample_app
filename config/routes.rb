@@ -2,6 +2,7 @@ SampleApp::Application.routes.draw do
 
 	resources :users
 	resources :sessions, only: [:new, :create, :destroy]  # Because we do not need show or edit
+	resources :microposts, only: [:create, :destroy]
 
 
 	root 'static_pages#home'
